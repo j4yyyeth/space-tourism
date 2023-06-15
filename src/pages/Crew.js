@@ -56,9 +56,9 @@ const Crew = () => {
       <CrewMembers job={job} name={name} description={description} img={img} />
       <div className="crew-btns">
         <button className={active === 1 ? 'active-crew-btn' : 'crew-btn'} onClick={()=>handle(1)}></button>
-        <button onClick={()=>handle(2)}></button>
-        <button onClick={()=>handle(3)}></button>
-        <button onClick={()=>handle(4)}></button>
+        <button className={active === 2 ? 'active-crew-btn' : 'crew-btn'} onClick={()=>handle(2)}></button>
+        <button className={active === 3 ? 'active-crew-btn' : 'crew-btn'} onClick={()=>handle(3)}></button>
+        <button className={active === 4 ? 'active-crew-btn' : 'crew-btn'} onClick={()=>handle(4)}></button>
       </div>
     </div>
   );
