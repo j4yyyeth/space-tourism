@@ -58,11 +58,7 @@ const Destination = () => {
   return (
     <div id="destination">
       <Navbar />
-      <h1>01 Pick Your Destination</h1>
-      <button className={active === 1 ? 'active-dst-btn' : 'dst-btn'} onClick={()=>handle(1)}>Moon</button>
-      <button className={active === 2 ? 'active-dst-btn' : 'dst-btn'} onClick={()=>handle(2)}>Mars</button>
-      <button className={active === 3 ? 'active-dst-btn' : 'dst-btn'} onClick={()=>handle(3)}>Europa</button>
-      <button className={active === 4 ? 'active-dst-btn' : 'dst-btn'} onClick={()=>handle(4)}>Titan</button>
+      <h1 className="page-h1">01 Pick Your Destination</h1>
       <Planets img={img} name={name} description={description} km={km} time={time} />
     </div>
   );
