@@ -13,44 +13,44 @@ const Destination = () => {
   const handle = (num) => {
     switch(num) {
         case 1:
+            setActive(1);
             setImg('destination/image-moon.png');
             setName('Moon');
             setDescription('See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.');
             setKm('384,400 KM');
             setTime('3 Days');
-            setActive(1);
             break;
         case 2:
+            setActive(2);
             setImg('destination/image-mars.png');
             setName('Mars');
             setDescription('Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!');
             setKm('225 MIL. KM');
             setTime('9 Months');
-            setActive(2);
             break;
         case 3:
+            setActive(3);
             setImg('destination/image-europa.png');
             setName('Europa');
             setDescription('The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.');
             setKm('628 MIL. KM');
             setTime('3 Years');
-            setActive(3);
             break;
         case 4:
+            setActive(4);
             setImg('destination/image-titan.png');
             setName('Titan');
             setDescription('The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.');
             setKm('1.6 BIL. KM');
             setTime('7 Years');
-            setActive(4);
             break;
         default:
-            setName('Launch Vehicle');
-            setDescription(`A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!`);
-            setImg('technology/image-launch-vehicle-portrait.jpg');
+            setActive(1);
+            setImg('destination/image-moon.png');
+            setName('Moon');
+            setDescription('See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.');
             setKm('384,400 KM');
             setTime('3 Days');
-            setActive(1);
             break;
     }
   }
@@ -59,7 +59,7 @@ const Destination = () => {
     <div id="destination">
       <Navbar />
       <h1 className="page-h1">01 Pick Your Destination</h1>
-      <Planets img={img} name={name} description={description} km={km} time={time} />
+      <Planets img={img} name={name} description={description} km={km} time={time} handle={handle} active={active} />
     </div>
   );
 };

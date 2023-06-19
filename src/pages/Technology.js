@@ -40,12 +40,15 @@ const Technology = () => {
     return (
         <div id="technology">
             <Navbar />
-            <h1>03 Space Launch 101</h1>
-            <button className={active === 1 ? 'active-tch-btn' : 'tch-btn'} onClick={()=>handle(1)}>1</button>
-            <button className={active === 2 ? 'active-tch-btn' : 'tch-btn'} onClick={()=>handle(2)}>2</button>
-            <button className={active === 3 ? 'active-tch-btn' : 'tch-btn'} onClick={()=>handle(3)}>3</button>
-            <h3>The Terminology...</h3>
-            <LaunchTech name={name} description={description} img={img} />
+            <h1 className="page-h1">03 Space Launch 101</h1>
+            <div className="btn-launch-flex">
+                <div className="tech-btns">
+                    <button className={active === 1 ? 'active-tch-btn' : 'tch-btn'} onClick={()=>handle(1)}>1</button>
+                    <button className={active === 2 ? 'active-tch-btn' : 'tch-btn'} onClick={()=>handle(2)}>2</button>
+                    <button className={active === 3 ? 'active-tch-btn' : 'tch-btn'} onClick={()=>handle(3)}>3</button>
+                </div>
+                <LaunchTech name={name} description={description} img={img} />
+            </div>
         </div>
     );
 };
